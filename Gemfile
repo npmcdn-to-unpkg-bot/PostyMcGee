@@ -23,6 +23,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'devise'
+gem 'aws-sdk', '< 2.0'
 
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
