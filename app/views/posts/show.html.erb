@@ -4,7 +4,7 @@
   <strong>Title:</strong>
   <%= @post.title %>
 </p>
-
+<%= image_tag(@post.post_image.url(:large)) %>
 <p>
   <strong>Description:</strong>
   <%= @post.description %>
