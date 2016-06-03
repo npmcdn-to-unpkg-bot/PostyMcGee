@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
+<%= link_to 'Back', posts_path, class: "btn btn-default btn-sm" %>
+<h1>
   <%= @post.title %>
-</p>
-<%= image_tag(@post.post_image.url(:large)) %>
-<p>
-  <strong>Description:</strong>
+</h1>
+<%= image_tag(@post.post_image.url(), class: "post-image") %>
+<div class="description">
   <%= @post.description %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+</div>
+<% if user_signed_in? %>
+<div class="actions">
+  <%= link_to 'Edit', edit_post_path(@post), class: "btn btn-default btn-sm" %>
+  <%= link_to 'Destroy', @post, class: "btn btn-default btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+<% end %>

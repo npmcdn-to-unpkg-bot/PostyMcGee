@@ -14,3 +14,11 @@
  *= require_tree .
  *= require_self
  */
+img.post-image {
+   width:100%;
+   height:auto;
+   margin:0 0 10px;
+ }
+ .grid-item .actions {
+   margin-top:20px;
+ }
